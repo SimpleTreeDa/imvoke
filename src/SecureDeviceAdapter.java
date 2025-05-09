@@ -1,4 +1,4 @@
-package src;
+package edu.ccu.students.logan.smarthome.adapters;
 
 public class SecureDeviceAdapter {
     private final Object device;
@@ -9,7 +9,7 @@ public class SecureDeviceAdapter {
             Class<?> clazz = Class.forName(className);
             this.device = clazz.getDeclaredConstructor().newInstance();
         } catch (Exception e) {
-            throw new RuntimeException("Failed to instantiate device: " + className, e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -21,7 +21,7 @@ public class SecureDeviceAdapter {
         try {
             device.getClass().getMethod(operateMethod).invoke(device);
         } catch (Exception e) {
-            throw new RuntimeException("Failed to call " + operateMethod, e);
+            throw new RuntimeException(e);
         }
     }
 

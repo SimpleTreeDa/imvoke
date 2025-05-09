@@ -1,4 +1,4 @@
-package src;
+package edu.ccu.students.logan.smarthome.adapters;
 
 public class PowerableAdapter {
     private final Object device;
@@ -11,37 +11,43 @@ public class PowerableAdapter {
             Class<?> clazz = Class.forName(className);
             this.device = clazz.getDeclaredConstructor().newInstance();
         } catch (Exception e) {
-            throw new RuntimeException("Failed to instantiate device: " + className, e);
+            throw new RuntimeException(e);
         }
     }
 
     public void setTurnOnMethodName(String name) {
         this.turnOnMethod = name;
     }
+
     public void setTurnOffMethodName(String name) {
         this.turnOffMethod = name;
     }
+
     public void setIsOnMethodName(String name) {
         this.isOnMethod = name;
     }
 
     public void turnOn() {
-        invokeMethod(turnOnMethod);
+        try {
+            device.getClass().getMethod(turnOnMethod).invoke(device);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void turnOff() {
-        invokeMethod(turnOffMethod);
+        try {
+            device.getClass().getMethod(turnOffMethod).invoke(device);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public boolean isOn() {
-        return (Boolean) invokeMethod(isOnMethod);
-    }
-
-    private Object invokeMethod(String methodName) {
         try {
-            return device.getClass().getMethod(methodName).invoke(device);
+            return (boolean) device.getClass().getMethod(isOnMethod).invoke(device);
         } catch (Exception e) {
-            throw new RuntimeException("Failed to invoke " + methodName, e);
+            throw new RuntimeException(e);
         }
     }
 

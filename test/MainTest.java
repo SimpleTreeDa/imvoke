@@ -1,3 +1,10 @@
+
+package edu.ccu.students.logan.smarthome.adapters;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class MainTest {
 
     // Inner test device with flags
