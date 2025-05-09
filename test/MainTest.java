@@ -1,14 +1,3 @@
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-
-import src.SmartDeviceAdapter;
-import src.PowerableAdapter;
-import src.SecureDeviceAdapter;
-
-
-
 public class MainTest {
 
     // Inner test device with flags
