@@ -1,0 +1,6 @@
+./src/PowerableAdapter.java
+./src/CustomSmartDevice.java
+./src/Main.java
+./src/SecureDeviceAdapter.java
+./src/SmartDeviceAdapter.java
+./test/MainTest.java
