@@ -1,9 +1,14 @@
 
-package edu.ccu.students.logan.smarthome.adapters;
+package test; // or no package if you’re compiling tests in the default package
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
+import edu.ccu.students.logan.smarthome.adapters.SmartDeviceAdapter;
+import edu.ccu.students.logan.smarthome.adapters.PowerableAdapter;
+import edu.ccu.students.logan.smarthome.adapters.SecureDeviceAdapter;
+
 
 public class MainTest {
 

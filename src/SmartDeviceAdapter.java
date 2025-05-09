@@ -1,5 +1,5 @@
 // SmartDeviceAdapter.java
-package src;
+package edu.ccu.students.logan.smarthome.adapters;
 
 public class SmartDeviceAdapter {
     private final Object device;

@@ -1,0 +1,75 @@
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+[36m╷[0m
+[36m├─[0m [36mJUnit Jupiter[0m [32m✔[0m
+[36m└─[0m [36mJUnit Vintage[0m [32m✔[0m
+[36m   └─[0m [36mMainTest[0m [32m✔[0m
+[36m      ├─[0m [31mtestPowerableAdapter[0m [31m✘[0m [31mjava.lang.ClassNotFoundException: MainTest$TestSmartDevice[0m
+[36m      ├─[0m [31mtestSecureDeviceAdapter[0m [31m✘[0m [31mjava.lang.ClassNotFoundException: MainTest$TestSmartDevice[0m
+[36m      └─[0m [31mtestSmartDeviceAdapter[0m [31m✘[0m [31mFailed to instantiate device: MainTest$TestSmartDevice[0m
+
+Failures (3):
+  JUnit Vintage:MainTest:testPowerableAdapter
+    MethodSource [className = 'test.MainTest', methodName = 'testPowerableAdapter', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.ClassNotFoundException: MainTest$TestSmartDevice
+       edu.ccu.students.logan.smarthome.adapters.PowerableAdapter.<init>(PowerableAdapter.java:14)
+       test.MainTest.testPowerableAdapter(MainTest.java:66)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.ClassNotFoundException: MainTest$TestSmartDevice
+       java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:433)
+       java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:586)
+       java.base/java.net.FactoryURLClassLoader.loadClass(URLClassLoader.java:852)
+       java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+       java.base/java.lang.Class.forName0(Native Method)
+       [...]
+  JUnit Vintage:MainTest:testSecureDeviceAdapter
+    MethodSource [className = 'test.MainTest', methodName = 'testSecureDeviceAdapter', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.ClassNotFoundException: MainTest$TestSmartDevice
+       edu.ccu.students.logan.smarthome.adapters.SecureDeviceAdapter.<init>(SecureDeviceAdapter.java:12)
+       test.MainTest.testSecureDeviceAdapter(MainTest.java:79)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.ClassNotFoundException: MainTest$TestSmartDevice
+       java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:433)
+       java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:586)
+       java.base/java.net.FactoryURLClassLoader.loadClass(URLClassLoader.java:852)
+       java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+       java.base/java.lang.Class.forName0(Native Method)
+       [...]
+  JUnit Vintage:MainTest:testSmartDeviceAdapter
+    MethodSource [className = 'test.MainTest', methodName = 'testSmartDeviceAdapter', methodParameterTypes = '']
+    => java.lang.RuntimeException: Failed to instantiate device: MainTest$TestSmartDevice
+       edu.ccu.students.logan.smarthome.adapters.SmartDeviceAdapter.<init>(SmartDeviceAdapter.java:12)
+       test.MainTest.testSmartDeviceAdapter(MainTest.java:56)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.ClassNotFoundException: MainTest$TestSmartDevice
+       java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:433)
+       java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:586)
+       java.base/java.net.FactoryURLClassLoader.loadClass(URLClassLoader.java:852)
+       java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+       java.base/java.lang.Class.forName0(Native Method)
+       [...]
+
+Test run finished after 22 ms
+[         3 containers found      ]
+[         0 containers skipped    ]
+[         3 containers started    ]
+[         0 containers aborted    ]
+[         3 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         3 tests failed          ]
+
